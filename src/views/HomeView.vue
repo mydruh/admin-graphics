@@ -1,5 +1,11 @@
-<script setup lang="ts">
+<script>
 import Graphics from '../components/Graphics.vue'
+
+export default {
+  components: {
+    Graphics
+  }
+}
 </script>
 
 <template>

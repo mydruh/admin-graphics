@@ -24,7 +24,7 @@ export default {
     const article = { 
       from: today,
       to: today, 
-      //picnics: ["1a251a8f-b0f0-11ed-9d84-b747605a4668"] 
+      picnics: ["1a251a8f-b0f0-11ed-9d84-b747605a4668"] 
     };
 
     const headers = { 
