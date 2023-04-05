@@ -28,7 +28,7 @@ export default {
     };
 
     const headers = { 
-      'Authorization': 'Token ' + '7120491e4aed89485784af4b9bb744ee20ac9cb2'//localStorage.getItem('token')
+      'Authorization': 'Token ' + localStorage.getItem('token'),
     };
 
     await axios
@@ -173,7 +173,7 @@ export default {
         };
 
         const headers = { 
-          'Authorization': 'Token ' + '7120491e4aed89485784af4b9bb744ee20ac9cb2'//localStorage.getItem('token')
+          'Authorization': 'Token ' + localStorage.getItem('token'),
         };
 
         await axios
@@ -210,7 +210,7 @@ export default {
       ajax: {
           url: "https://api.picnic.dev.thefactory.kz/api/partners/",
           headers: {
-            'Authorization': 'Token ' + '7120491e4aed89485784af4b9bb744ee20ac9cb2'
+            'Authorization': 'Token ' + localStorage.getItem('token'),
           },
           dataType: "json",
           delay: 250,
@@ -243,7 +243,7 @@ export default {
       ajax: {
           url: "https://api.picnic.dev.thefactory.kz/api/picnics/",
           headers: {
-            'Authorization': 'Token ' + '7120491e4aed89485784af4b9bb744ee20ac9cb2'
+            'Authorization': 'Token ' + localStorage.getItem('token'),
           },
           dataType: "json",
           delay: 250,

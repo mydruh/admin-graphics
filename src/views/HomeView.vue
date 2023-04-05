@@ -10,6 +10,8 @@ export default {
 
 <template>
   <main>
-    <Graphics />
+    <div>
+      <Graphics />
+    </div>
   </main>
 </template>
