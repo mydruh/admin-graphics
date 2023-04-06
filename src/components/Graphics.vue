@@ -17,7 +17,9 @@ export default {
   },
   async mounted() {
     var dateControl = document.getElementById('dateFrom');
-    dateControl.value = new Date().toISOString().slice(0, 10);
+    var currentDate = new Date()
+    currentDate.setMonth(currentDate.getMonth() - 1);
+    dateControl.value = currentDate.toISOString().slice(0, 10);
 
     var today = this.convertDate(new Date().toISOString().slice(0, 10))
 
@@ -28,7 +30,7 @@ export default {
     };
 
     const headers = { 
-      'Authorization': 'Token ' + localStorage.getItem('token'),
+      'Authorization': 'Token ' + localStorage.getItem('token'),//'3c41289ea70c3c4f1aade7c8f467de2ae0f15872'
     };
 
     await axios
@@ -204,7 +206,7 @@ export default {
     },
     select2Init(){
       $('#partnerSelect').select2({
-      placeholder: "Партнёр (список)",
+      placeholder: "Партнёр",
       multiple: true,
       //minimumInputLength: 3,
       ajax: {
@@ -237,7 +239,7 @@ export default {
     },
     select2Init2(){
       $('#picnicSelect').select2({
-      placeholder: "Пикник (список)",
+      placeholder: "Пикник",
       multiple: true,
       //minimumInputLength: 3,
       ajax: {
@@ -297,7 +299,7 @@ export default {
 <template>
   <div>
     <div class="container" style="margin-top: 50px;">
-      <div class="row row-cols-5">
+      <div class="row row-cols-3">
         <div class="col">
       <div class="card">
         <input id="dateFrom" type="date" class="form-control" placeholder="От (дата)" aria-label="От (дата)">
@@ -310,7 +312,15 @@ export default {
       </div>
     </div>
 
-    <div class="col">
+    <div class="col" style="text-align: -webkit-center;">
+      <div class="card" style="width: 50%;">
+        <button @click="searchFnc" type="button" class="btn btn-dark btn-search">Поиск</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="row row-cols-3" style="margin-top: 30px">
+  <div class="col">
       <div class="card" style="height: 100%;">
         <select id="picnicSelect" class="form-control js-example-basic-single" name="state"></select>
     </div>
@@ -319,12 +329,6 @@ export default {
     <div class="col">
       <div class="card" style="height: 100%;">
         <select id="partnerSelect" class="form-control js-example-basic-single" name="state"></select>
-      </div>
-    </div>
-
-    <div class="col">
-      <div class="card">
-        <button @click="searchFnc" type="button" class="btn btn-dark">Поиск</button>
       </div>
     </div>
   </div>
@@ -393,5 +397,42 @@ export default {
 
 .select2-selection{
   height: 100% !important;
+}
+
+.select2-selection__choice{
+  background-color: #79aec8 !important;
+  color: white;
+}
+
+.select2-selection__choice button{
+  color: white !important;
+  border-right: 1px solid #fff !important;
+}
+
+.select2-selection__rendered{
+  margin-left: 5px !important;
+}
+
+h5, p {
+  color: #417690 !important
+}
+
+.btn-search{
+  background: #417690 !important;
+  border: none;
+  border: none !important;
+}
+
+.btn-search:hover{
+  background: #79aec8 !important;
+  border: none !important;
+}
+
+.my-bootstrap-namespace .card-text:last-child{
+  padding: 0 !important;
+}
+
+.select2-search__field{
+  height: 24px !important;
 }
 </style>
