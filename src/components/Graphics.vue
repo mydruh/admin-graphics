@@ -17,16 +17,21 @@ export default {
   },
   async mounted() {
     var dateControl = document.getElementById('dateFrom');
+    var dateControlTo = document.getElementById('dateTo');
+
     var currentDate = new Date()
     currentDate.setMonth(currentDate.getMonth() - 1);
+
+    dateControlTo.value = new Date().toISOString().slice(0, 10);
     dateControl.value = currentDate.toISOString().slice(0, 10);
+
+    var minMonth = this.convertDate(currentDate.toISOString().slice(0, 10))
 
     var today = this.convertDate(new Date().toISOString().slice(0, 10))
 
     const article = { 
-      from: today,
+      from: minMonth,
       to: today, 
-      picnics: ["1a251a8f-b0f0-11ed-9d84-b747605a4668"] 
     };
 
     const headers = { 
@@ -175,7 +180,7 @@ export default {
         };
 
         const headers = { 
-          'Authorization': 'Token ' + localStorage.getItem('token'),
+          'Authorization': 'Token ' + localStorage.getItem('token'),//'3c41289ea70c3c4f1aade7c8f467de2ae0f15872'
         };
 
         await axios
@@ -212,7 +217,7 @@ export default {
       ajax: {
           url: "https://api.picnic.dev.thefactory.kz/api/partners/",
           headers: {
-            'Authorization': 'Token ' + localStorage.getItem('token'),
+            'Authorization': 'Token ' + localStorage.getItem('token'),//'3c41289ea70c3c4f1aade7c8f467de2ae0f15872'
           },
           dataType: "json",
           delay: 250,
@@ -245,7 +250,7 @@ export default {
       ajax: {
           url: "https://api.picnic.dev.thefactory.kz/api/picnics/",
           headers: {
-            'Authorization': 'Token ' + localStorage.getItem('token'),
+            'Authorization': 'Token ' + localStorage.getItem('token'),//'3c41289ea70c3c4f1aade7c8f467de2ae0f15872'
           },
           dataType: "json",
           delay: 250,
