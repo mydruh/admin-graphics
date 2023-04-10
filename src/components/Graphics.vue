@@ -39,7 +39,7 @@ export default {
     };
 
     await axios
-        .post('https://api.picnic.dev.thefactory.kz/api/picnic/statistics/', article, { headers })
+        .post('https://api.picnic.esquire.kz/api/picnic/statistics/', article, { headers })
         .then((response) => {
           console.log(response.data)
           this.payments_sum_total = response.data.data.payments_sum_total.toLocaleString('ru-RU')
@@ -184,7 +184,7 @@ export default {
         };
 
         await axios
-            .post('https://api.picnic.dev.thefactory.kz/api/picnic/statistics/', article, { headers })
+            .post('https://api.picnic.esquire.kz/api/picnic/statistics/', article, { headers })
             .then((response) => {
               console.log(response.data)
               this.payments_sum_total = response.data.data.payments_sum_total.toLocaleString('ru-RU')
@@ -215,7 +215,7 @@ export default {
       multiple: true,
       //minimumInputLength: 3,
       ajax: {
-          url: "https://api.picnic.dev.thefactory.kz/api/partners/",
+          url: "https://api.picnic.esquire.kz/api/partners/",
           headers: {
             'Authorization': 'Token ' + localStorage.getItem('token'),//'3c41289ea70c3c4f1aade7c8f467de2ae0f15872'
           },
@@ -248,7 +248,7 @@ export default {
       multiple: true,
       //minimumInputLength: 3,
       ajax: {
-          url: "https://api.picnic.dev.thefactory.kz/api/picnics/",
+          url: "https://api.picnic.esquire.kz/api/picnics/",
           headers: {
             'Authorization': 'Token ' + localStorage.getItem('token'),//'3c41289ea70c3c4f1aade7c8f467de2ae0f15872'
           },
