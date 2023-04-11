@@ -307,14 +307,14 @@ export default {
       <div class="row row-cols-3">
         <div class="col">
       <div class="card" style="border: none">
-        <p class="card-text">От (дата)</p>
+        <p class="card-text">От</p>
         <input id="dateFrom" type="date" class="form-control" placeholder="От (дата)" aria-label="От (дата)">
       </div>
     </div>
 
     <div class="col">
       <div class="card" style="border: none">
-        <p class="card-text">До (дата)</p>
+        <p class="card-text">До</p>
         <input id="dateTo" type="date" class="form-control" placeholder="До (дата)" aria-label="До (дата)">
       </div>
     </div>
