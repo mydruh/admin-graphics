@@ -205,4 +205,8 @@ import '@/assets/main.scss'
     -webkit-text-size-adjust:100%;
     -webkit-tap-highlight-color:transparent
 }
+
+.my-bootstrap-namespace h5, p {
+    font-family: "Roboto","Lucida Grande","DejaVu Sans","Bitstream Vera Sans",Verdana,Arial,sans-serif !important;
+}
 </style>

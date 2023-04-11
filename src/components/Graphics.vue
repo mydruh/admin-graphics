@@ -306,13 +306,15 @@ export default {
     <div class="container" style="margin-top: 50px;">
       <div class="row row-cols-3">
         <div class="col">
-      <div class="card">
+      <div class="card" style="border: none">
+        <p class="card-text">От (дата)</p>
         <input id="dateFrom" type="date" class="form-control" placeholder="От (дата)" aria-label="От (дата)">
       </div>
     </div>
 
     <div class="col">
-      <div class="card">
+      <div class="card" style="border: none">
+        <p class="card-text">До (дата)</p>
         <input id="dateTo" type="date" class="form-control" placeholder="До (дата)" aria-label="До (дата)">
       </div>
     </div>
@@ -326,13 +328,15 @@ export default {
 
   <div class="row row-cols-3" style="margin-top: 30px">
   <div class="col">
-      <div class="card" style="height: 100%;">
+      <div class="card" style="height: 100%; border: none">
+        <p class="card-text">Пикник</p>
         <select id="picnicSelect" class="form-control js-example-basic-single" name="state"></select>
     </div>
 
     </div>
     <div class="col">
-      <div class="card" style="height: 100%;">
+      <div class="card" style="height: 100%; border: none">
+        <p class="card-text">Партнеры</p>
         <select id="partnerSelect" class="form-control js-example-basic-single" name="state"></select>
       </div>
     </div>
@@ -378,15 +382,15 @@ export default {
 
   <div class="row row-cols-3" style="margin-top: 40px;">
     <div class="col">
-      <h5 class="card-title" style="margin-bottom: 20px;">Сумма оплат</h5>
+      <h5 class="card-title" style="margin-bottom: 20px; text-transform: none;">Сумма оплат</h5>
       <canvas id="myChart"></canvas>
     </div>
     <div class="col">
-      <h5 class="card-title" style="margin-bottom: 20px;">Количество оплат</h5>
+      <h5 class="card-title" style="margin-bottom: 20px; text-transform: none;">Количество оплат</h5>
       <canvas id="myChart1"></canvas>
     </div>
     <div class="col">
-      <h5 class="card-title" style="margin-bottom: 20px;">Количество билетов</h5>
+      <h5 class="card-title" style="margin-bottom: 20px; text-transform: none;">Количество билетов</h5>
       <canvas id="myChart2"></canvas>
     </div>
   </div>
